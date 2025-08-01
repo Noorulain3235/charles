@@ -7,11 +7,11 @@ export default function AboutCompanySection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
           <div className="order-2 mt-0 lg:order-1">
-            <div className="rounded-lg  overflow-hidden shadow-lg">
+            <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/images/1.jpg" 
+                src={`${process.env.PUBLIC_URL}/images/1.jpg`} 
                 alt="Business meeting - woman and man working together at laptop"
-                className="w-full h-auto  object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -36,45 +36,44 @@ export default function AboutCompanySection() {
             </div>
             <div className="border-t border-dotted border-gray-400 my-4"></div>
 
-            
             {/* Vision, Missions, Goals Section */}
-           <div className="grid grid-cols-3 gap-8">
-  {/* Vision */}
-  <div className="text-center">
-    <div className="mb-4 flex justify-center">
-      <img 
-        src="/images/download (6).png" 
-        alt="Vision icon"
-        className="w-10 h-10"
-      />
-    </div>
-    <h3 className="text-xl font-semibold text-gray-900">Vision</h3>
-  </div>
+            <div className="grid grid-cols-3 gap-8">
+              {/* Vision */}
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/images/download (6).png`} 
+                    alt="Vision icon"
+                    className="w-10 h-10"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Vision</h3>
+              </div>
 
-  {/* Missions */}
-  <div className="text-center">
-    <div className="mb-4 flex justify-center">
-      <img 
-        src="/images/download.jpg" 
-        alt="Missions icon"
-        className="w-15 h-12"
-      />
-    </div>
-    <h3 className="text-xl font-semibold text-gray-900">Missions</h3>
-  </div>
+              {/* Missions */}
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/images/download.jpg`} 
+                    alt="Missions icon"
+                    className="w-15 h-12"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Missions</h3>
+              </div>
 
-  {/* Goals */}
-  <div className="text-center">
-    <div className="mb-4 flex justify-center">
-      <img 
-        src="/images/images (4).png" 
-        alt="Goals icon"
-        className="w-10 h-10"
-      />
-    </div>
-    <h3 className="text-xl font-semibold text-gray-900">Goals</h3>
-  </div>
-</div>
+              {/* Goals */}
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/images/images (4).png`} 
+                    alt="Goals icon"
+                    className="w-10 h-10"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Goals</h3>
+              </div>
+            </div>
 
           </div>
         </div>

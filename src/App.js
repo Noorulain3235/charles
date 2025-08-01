@@ -3,7 +3,7 @@ import Navbar from './component/Navbar';
 import Heroslider from './component/Heroslider';
 import Boxes from './component/Boxes';
 import About from './component/About';
-// import About1 from './component/Image';
+import About1 from './component/Image';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Heroslider />
         <Boxes/>
         <About/>
-        {/* <About1/> */}
+        <About1/>
     </BrowserRouter>
   );
 }

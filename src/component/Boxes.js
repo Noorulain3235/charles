@@ -3,25 +3,25 @@ import React from 'react';
 export default function CategoryBoxes() {
   const categories = [
     {
-      image: "/images/1.png",
+      image: `${process.env.PUBLIC_URL}/images/1.png`,
       title: "Consumer Insights",
       description: "The east side to a deluxe apartment in move on up to the east side",
       bg: "bg-white"
     },
     {
-      image: "/images/2.png",
+      image: `${process.env.PUBLIC_URL}/images/2.png`,
       title: "Emerging Ideas",
       description: "The east side to a deluxe apartment in move on up to the east side",
       bg: "bg-[#f2f4f7]"
     },
     {
-      image: "/images/3.png",
+      image: `${process.env.PUBLIC_URL}/images/3.png`,
       title: "Thought Leadership",
       description: "The east side to a deluxe apartment in move on up to the east side",
       bg: "bg-[#e1e9f5]"
     },
     {
-      image: "/images/4.png",
+      image: `${process.env.PUBLIC_URL}/images/4.png`,
       title: "Marketing Goals",
       description: "The east side to a deluxe apartment in move on up to the east side",
       bg: "bg-[#d5e2f5]"
