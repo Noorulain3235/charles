@@ -29,13 +29,13 @@ export default function CategoryBoxes() {
   ];
 
   return (
-    <div className="w-full bg-white overflow-x-auto">
-      <div className="max-w-7xl ml-0 mr-0 mx-auto">
-        <div className="flex flex-nowrap p-0 m-0 ">
+    <div className="w-full bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {categories.map((category, index) => (
             <div
               key={index}
-              className={`group ${category.bg} p-4 sm:p-6 text-center transition-all duration-300 hover:shadow-lg relative overflow-hidden cursor-pointer w-[394px] h-[300px] flex-shrink-0`}
+              className={`group ${category.bg} p-4 sm:p-6 text-center transition-all duration-300 hover:shadow-lg relative overflow-hidden cursor-pointer w-full sm:w-[48%] lg:w-[23%] h-[300px]`}
             >
               {/* Hover line */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#001848] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

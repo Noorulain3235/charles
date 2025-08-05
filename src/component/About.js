@@ -18,11 +18,13 @@ export default function AboutCompanySection() {
           
           {/* Right side - Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-4xl font-bold text-[#001848] mb-8 ml-10">
+           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#001848] mb-8 text-center lg:text-left">
               ABOUT OUR COMPANY
             </h2>
+
             
-            <div className="space-y-6 text-gray-600 text-center mb-12">
+            <div className="space-y-6 text-gray-600 text-center lg:text-left mb-12">
+
               <p className="leading-relaxed">
                 A tale of a fateful trip that started from this tropic port aboard this tiny ship 
                 today still wanted by the government they survive as soldiers of fortune to a 
@@ -54,7 +56,7 @@ export default function AboutCompanySection() {
               <div className="text-center">
                 <div className="mb-4 flex justify-center">
                   <img 
-                    src={`${process.env.PUBLIC_URL}/images/download.jpg`} 
+                    src={`${process.env.PUBLIC_URL}/images/award.png`} 
                     alt="Missions icon"
                     className="w-15 h-12"
                   />

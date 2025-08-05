@@ -11,25 +11,24 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`top-5 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg px-10' : 'bg-white px-5'}`}>
+    <header className={`top-5 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg px-4 md:px-10' : 'bg-white px-4 md:px-5'}`}>
       <div className="flex items-center justify-between py-4 max-w-7xl mx-auto">
-        <div>
-          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="" />
-        </div>
-        {/* <nav className="hidden md:flex gap-6 text-sm text-gray-700">
-        <img src={`${process.env.PUBLIC_URL}/images/images__3_-removebg-preview.png`} alt="" className="w-[90px] h-[100px]" />
-        <div className="text-center">
-          <h2>Address:</h2>
-          <h5>2A0, Queenstown St, USA.</h5>
-        </div>
-        </nav> */}
-        <div className="flex items-center justify-center gap-8 bg-white p-4 shadow-sm">
+        
+        {/* Logo */}
+       <div className="hidden sm:block">
+  <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className="h-12 w-auto" />
+</div>
+
+
+        {/* Info Section: Address + Mail + Button (Hidden on small screens) */}
+        <div className="hidden md:flex items-center justify-center gap-8 bg-white p-4 shadow-sm">
+          
           {/* Address Block */}
           <div className="flex items-start gap-3">
             <img src={`${process.env.PUBLIC_URL}/images/images__3_-removebg-preview.png`} alt="Location" className="w-[90px] h-[100px]" />
             <div className="mt-6">
-              <h4 className=" text-base font-semibold text-gray-800">Address:</h4>
-              <p className="text-base  text-gray-600">2A0, Queenstown St, USA.</p>
+              <h4 className="text-base font-semibold text-gray-800">Address:</h4>
+              <p className="text-base text-gray-600">2A0, Queenstown St, USA.</p>
             </div>
           </div>
 
@@ -46,6 +45,7 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* CTA Button - Hidden on mobile */}
         <Link to="/your-link-here">
           <button className="hidden md:block border-[3px] border-blue-900 text-blue-900 px-4 py-2 rounded hover:bg-blue-900 hover:text-white transition">
             GET A QUOTES
