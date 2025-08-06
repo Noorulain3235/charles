@@ -5,7 +5,7 @@ import Heroslider from './component/Heroslider';
 import Boxes from './component/Boxes';
 import About from './component/About';
 import About1 from './component/Image';
-// import Team from './component/Team';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Boxes/>
         <About/>
         <About1/>
-        {/* <Team/> */}
+        <Footer/>
     </BrowserRouter>
    
 

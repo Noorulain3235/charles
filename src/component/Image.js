@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Team from './Team';
 import Contact from './Contact';
 
@@ -62,6 +62,16 @@ image: `${process.env.PUBLIC_URL}/images/8.jpg`
 
 ];
 export default function StickyImageSection() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === services.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <div className="relative h-[300px] w-full overflow-hidden">
@@ -91,7 +101,7 @@ export default function StickyImageSection() {
     <div className=' px-10 py-10 mt-10 text-justify'>
       <h1 className='text-4xl font-bold text-center'>OUR SERVICES</h1>
       <p className='text-1xl mt-4 text-gray-700 text-center'>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
 
   {services.map((service, index) => (
 
@@ -139,7 +149,83 @@ export default function StickyImageSection() {
 
          </div>
         ))}
-     </div>
+     </div> */}
+
+
+                  {/* SLIDE Mobile  */}
+     <div className="block lg:hidden relative w-full overflow-hidden mt-9">
+  <div
+    className="flex transition-transform duration-500 ease-in-out"
+    style={{
+      transform: `translateX(-${currentIndex * 100}%)`,
+    }}
+  >
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className="w-full flex-shrink-0 flex justify-center px-4"
+      >
+        <div className="flex w-full border overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-28 h-28 object-cover flex-shrink-0"
+          />
+          <div className="flex flex-col justify-between p-4 flex-grow">
+            <div>
+              <h3 className="text-lg font-bold text-blue-1000 break-words">
+                {service.title}
+              </h3>
+              <p className="text-gray-500 break-words">
+                {service.subtitle}
+              </p>
+            </div>
+            <a
+              href="#"
+              className="mt-2 text-[#001848] font-medium text-sm"
+            >
+              READ MORE
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+ {/* ✅ GRID (Desktop Only) */}
+      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex border overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-28 h-28 object-cover flex-shrink-0"
+            />
+            <div className="p-4 flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-blue-1000">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500">{service.subtitle}</p>
+              </div>
+              <a
+                href="#"
+                className="mt-2 text-[#001848] font-medium text-sm"
+              >
+                READ MORE
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+
+
       <h5 className='text-2xl py-12 text-gray-800  text-center'>You can also send us an email and we’ll get in touch shortly, or Call us</h5>
         <div className='text-2xl  underline text-blue-800  text-center'>
            <a href="#">info@support.com </a>(or)
