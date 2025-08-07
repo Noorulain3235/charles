@@ -26,7 +26,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="py-10 mt-10 text-center justify-center">
+      <div className="py-10 mt-20 text-center justify-center">
         <h1 className="text-4xl font-bold text-center justify-center: text-1xl">FREE CONSULTATION</h1>
         <p className="text-sm mt-4 text-center justify-center text-gray-700">
           A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers

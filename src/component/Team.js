@@ -9,7 +9,7 @@ export default function Team() {
            <img 
     src={`${process.env.PUBLIC_URL}/images/IMG1.jpg`} 
     alt="Vision"
-    className="w-full  h-[200px] object-top "
+    className="w-full  h-[210px] object-cover"
   />
     <h1 className='text-2xl mt-4 text-center'>Richards Mills</h1>
     <p className='text-1xl  text-gray-700 text-center italic '>Sales Consultant</p>
@@ -21,7 +21,7 @@ export default function Team() {
            <img 
     src={`${process.env.PUBLIC_URL}/images/IMG2.jpg`} 
     alt="Vision"
-    className=" w-full h-[200px] object-top "
+    className=" w-full h-[210px] object-cover"
   />
     <h1 className='text-2xl mt-4 text-center'>Mike Hussey</h1>
     <p className='text-1xl  text-gray-700 text-center italic '>Founder, CEO</p>
@@ -31,7 +31,7 @@ export default function Team() {
         <div  className="border border-black rounded-sm w-full md:w-1/2 h-[300px] ">  <img 
     src={`${process.env.PUBLIC_URL}/images/IMG3.jpg`} 
     alt="Vision"
-    className=" w-full h-[200px] object-top "
+    className=" w-full h-[210px] object-cover"
   />
     <h1 className='text-2xl mt-4 text-center'>Jenilia D’sosa</h1>
     <p className='text-1xl  text-gray-700 text-center italic '>Marketing Lead</p>
@@ -43,7 +43,7 @@ export default function Team() {
            <img 
     src={`${process.env.PUBLIC_URL}/images/IMG4.jpg`} 
     alt="Vision"
-    className=" w-full  h-[200px] object-top "
+    className=" w-full  h-[210px] object-cover "
   />
     <h1 className='text-2xl mt-4 text-center'>David Warner</h1>
     <p className='text-1xl  text-gray-700 text-center italic '>SEO Analyst</p>

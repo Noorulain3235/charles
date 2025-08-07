@@ -58,7 +58,7 @@ export default function Team() {
         RECENT POSTS
       </h1>
       <div className="flex flex-col gap-4">
-        <div className="h-[50px] flex flex-row gap-4">
+        <div className="h-[50px] flex flex-row gap-4 py-2">
           <img
             src={`${process.env.PUBLIC_URL}/images/3.jpg`}
             alt="Vision"
@@ -71,7 +71,9 @@ export default function Team() {
             <p className="text-gray-500">FEB 06,2018</p>
           </div>
         </div>
-        <div className="h-[50px] flex flex-row gap-4 mt-10">
+        <div className="border-t border-dotted border-gray-400 mt-[42px]"></div>
+
+        <div className="h-[50px] flex flex-row gap-4 ">
           <img
             src={`${process.env.PUBLIC_URL}/images/5.jpg`}
             alt="Vision"
@@ -136,51 +138,4 @@ export default function Team() {
 
 
 
-// import React, { useState, useEffect } from 'react';
 
-// const images = [
-//   '/images/slide1.jpg',
-//   '/images/slide2.jpg',
-//   '/images/slide3.jpg',
-//   '/images/slide2.jpg',
-//   '/images/slide3.jpg',
-// ];
-
-// export default function ImageSlider() {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   // Auto slide every 4 seconds
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) =>
-//         prevIndex === images.length - 1 ? 0 : prevIndex + 1
-//       );
-//     }, 4000);
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className="relative w-full h-64 sm:h-96 overflow-hidden">
-//       {/* Slide images container */}
-//       <div
-//         className="flex transition-transform duration-700 ease-in-out"
-//         style={{
-//           transform: `translateX(-${currentIndex * 100}%)`,
-//           width: `${images.length * 2}%`,
-//         }}
-//       >
-//         {images.map((img, index) => (
-//           <img
-//             key={index}
-//             src={img}
-//             alt={`Slide ${index + 1}`}
-//             className="w-full h-64 sm:h-96 object-cover flex-shrink-0"
-//           />
-//         ))}
-//       </div>
-
-   
-    
-//     </div>
-//   );
-// }
