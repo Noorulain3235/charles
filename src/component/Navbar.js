@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll'; // ✅ changed import
 
 const navItems = [
-  { label: 'ABOUT', href: '/About' },
-  { label: 'SERVICES', href: '/SERVICES' },
-  { label: 'PORTFOLIO', href: '/Portfolio' },
-  { label: 'NEWS', href: '/NEWS' },
-  { label: 'TEAM', href: '/TEAM' },
-  { label: 'TESTIMONIALS', href: '/TESTIMONIALS' },
-  { label: 'CONTACT', href: '/CONTACT' },
+  { label: 'ABOUT', href: 'about' },
+  { label: 'SERVICES', href: 'services' },
+  { label: 'PORTFOLIO', href: 'portfolio' },
+  { label: 'NEWS', href: 'news' },
+  { label: 'TEAM', href: 'team' },
+  { label: 'TESTIMONIALS', href: 'testimonials' },
+  { label: 'CONTACT', href: 'contact' },
 ];
 
 export default function Navbar() {
@@ -34,8 +34,8 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
           
-          {/* Logo (Mobile + Desktop) */}
-          <Link to="/" className="flex items-center">
+          {/* Logo */}
+          <Link to="home" smooth={true} duration={500} offset={-80} className="flex items-center cursor-pointer">
             <img
               src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt="Logo"
@@ -49,6 +49,9 @@ export default function Navbar() {
               <li key={item.label}>
                 <Link
                   to={item.href}
+                  smooth={true}
+                  duration={500}
+                  offset={-80} // keeps section from being hidden by navbar
                   className="cursor-pointer hover:no-underline flex items-center gap-1"
                 >
                   {item.label}
@@ -57,7 +60,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-white text-xl ml-auto"
@@ -73,7 +76,10 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 to={item.href}
-                className="block py-2"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="block py-2 cursor-pointer"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}

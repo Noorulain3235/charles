@@ -39,12 +39,12 @@ export default function App() {
             </div>
 
             {/* left side */}
-            <div className="flex flex-col md:flex-row justify-center md:mt-[7%] p-10">
+            <div className="flex flex-col md:flex-row justify-center md:mt-[5%] p-5">
 
 
                 <div className="relative w-full overflow-hidden">
       {/* Image */}
-      <div className="h-[350px] md:h-[400px] w-full">
+      <div className="h-[300px] md:h-[350px] w-full">
         <img
           src={image}
           alt="slide"
