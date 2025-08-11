@@ -52,7 +52,7 @@ export default function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-80} // keeps section from being hidden by navbar
-                  className="cursor-pointer hover:no-underline flex items-center gap-1"
+                  className="cursor-pointer hover:no-underline flex hover:text-[#dba204] items-center gap-1"
                 >
                   {item.label}
                 </Link>
