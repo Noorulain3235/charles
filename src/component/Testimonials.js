@@ -56,6 +56,7 @@ export default function Testimonials() {
                     <p className="text-gray-600 mt-2 max-w-md">{feedback}</p>
                 </div>
             </div>
+             <div className="border-t border-solid border-black-800 mt-28"></div>
         </div>
     );
 }
