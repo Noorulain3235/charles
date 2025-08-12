@@ -35,7 +35,7 @@ export default function Testimonials() {
     const { image, name, feedback } = slides[index];
 
     return (
-        <div className="py-[100px] px-5 md:px-20">
+        <div className="py-[200px] px-5 md:px-20">
             <h1 className="text-3xl text-gray-800 md:text-4xl py-5 tracking-[3px] font-montserrat font-normal text-center">
                 TESTIMONIALS
             </h1>
