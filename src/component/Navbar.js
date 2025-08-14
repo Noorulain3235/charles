@@ -112,15 +112,16 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; 
 
 const navItems = [
-   { label: "HOME", path: "/" },
-  { label: "ABOUT", path: "/About2" },
-  { label: "SERVICES", path: "/Services2" },
-  { label: "PORTFOLIO", path: "/Portfolio2" },
-  { label: "NEWS", path: "/News" }, 
-  { label: "TEAM", path: "/OurTeam" },
-  { label: "TESTIMONIALS", path: "/Testimony" },
-  { label: "CONTACT", path: "/Contactus" },
+  { label: "HOME", path: "/" },
+  { label: "ABOUT", path: "/about2" },
+  { label: "SERVICES", path: "/services2" },
+  { label: "PORTFOLIO", path: "/portfolio2" },
+  { label: "NEWS", path: "/news" }, 
+  { label: "TEAM", path: "/ourteam" },
+  { label: "TESTIMONIALS", path: "/testimony" },
+  { label: "CONTACT", path: "/contactus" },
 ];
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

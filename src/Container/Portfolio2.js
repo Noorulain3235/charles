@@ -1,20 +1,19 @@
 import React from "react";
-
-import Testimonials from "./Testimonials";
-
+import Portfolio from "../component/Portfolio";
 
 
 
-export default function Team2() {
+
+
+export default function Portfolio2() {
     return (
         <>
             <div className="py-6 bg-gray-600 h-[300px] flex justify-center items-center">
                 <h1 className="text-3xl text-white md:text-4xl tracking-[3px] font-montserrat font-normal text-center">
-                   OUR RECOMMENDATION
-                  
+                    PORTFOLIO
                 </h1>
             </div>
-            <Testimonials/>
+            <Portfolio/>
 
         </>
     );
