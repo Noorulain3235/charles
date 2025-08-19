@@ -1,35 +1,42 @@
+import { Link } from "react-router-dom";
 import React from "react";
+
 
 export default function Heroimage() {
     return (
-        <>
-            <div className="relative flex w-full h-[300px] md:h-[400px] lg:h-[500px]">
-                <div>
-                    <img
-                        src={`${process.env.PUBLIC_URL}/images/images.jpeg`}
-                        alt=""
-                        className="absolute w-full h-full object-cover"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full  flex flex-col items-center justify-center text-white">
-                        <div className="flex">
-                            <h1 className=" text-3xl md:text-6xl [letter-spacing:10px] font-bold">Next</h1>
-                            <h1 className="text-3xl md:text-6xl [letter-spacing:10px]">startup</h1>
-                           
-                        </div>
-                         <p  className="text-1xl mt-5 font-semibold  [letter-spacing:3px]">Landing Page</p>
-                    </div>
-                </div>
-                <div className="absolute 
-                mt-[70%] ml-0 w-full  /* mobile default */
-                sm:mt-[37%] sm:ml-[30%] sm:w-[40%]">
-                    <img
-                        src={`${process.env.PUBLIC_URL}/images/9.png`}
-                        alt=""
-                        className="object-fill w-full"
-                    />
-                </div>
+        <div className="w-full h-[450px] md:h-[550px] lg:h-[600px] sticky top-0 z-0">
+
+
+            <img
+                src={`${process.env.PUBLIC_URL}/images/images (1).jpeg`}
+                alt="Hero"
+                className="absolute w-full h-full object-cover"
+            />
+
+
+            <div className="absolute inset-0 flex flex-col items-center justify-center 
+            text-center text-white px-4">
+                <p className="text-xl font-semibold">Casual & Everyday</p>
+                <h1 className="text-3xl md:text-5xl font-bold mt-2 font-serif italic">
+                    Effortlessly blend comfort & style!
+                </h1>
+
+
+                <p className="text-base mt-5 font-semibold max-w-2xl">
+                    Effortlessly blend comfort and style with our Casual & Everyday
+                    collection, featuring cozy sweaters, versatile denim, laid-back tees,
+                    and relaxed-fit joggers for your everyday adventures.
+                </p>
+                <Link
+                    to="/"
+                    className="block mt-5 font-semibold md:font-medium w-[170px]
+                     text-sm text-center bg-transparent border border-white
+               text-white py-3 hover:bg-white hover:text-black transition"
+                >
+                    VIEW COLLECTION
+                </Link>
 
             </div>
-        </>
+        </div>
     );
 }
